@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FF Beta VIP - Verifikasi Super Ketat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://a.top4top.io/p_3471rkc7l1.jpg" alt="FF Beta VIP Logo">
+        </div>
+        <h1>FF Beta VIP - Pembelian</h1>
+        <p>Ikuti langkah-langkah di bawah ini:</p>
+
+        <div id="step1">
+            <h2>Langkah 1: Data Pembeli</h2>
+            <div class="form-group">
+                <label for="phone">Nomor Handphone (62xxxxxxxxxxx):</label>
+                <input type="text" id="phone" placeholder="6282129071128" maxlength="13">
+                <div id="phoneError" class="error-message"></div>
+            </div>
+            <div class="form-group">
+                <label for="username">Username FF:</label>
+                <input type="text" id="username" placeholder="Masukkan username FF Anda">
+                <div id="usernameError" class="error-message"></div>
+            </div>
+            <div class="form-group amount-input">
+                <span>Rp</span>
+                <input type="number" id="amount" placeholder="10000" min="10000">
+            </div>
+            <div id="amountError" class="error-message"></div>
+            <button onclick="validateStep1()">Lanjut ke Pembayaran</button>
+        </div>
+
+        <div class="whatsapp">
+            <a href="https://wa.me/6282129071128" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                Butuh bantuan? Hubungi Admin
+            </a>
+        </div>
+    </div>
+
+    <script src="validation.js"></script>
+</body>
+</html>

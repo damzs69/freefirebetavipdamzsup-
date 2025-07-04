@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FF Beta VIP - Verifikasi Pembayaran</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://a.top4top.io/p_3471rkc7l1.jpg" alt="FF Beta VIP Logo">
+        </div>
+        <h1>FF Beta VIP - Pembelian</h1>
+
+        <div id="step2">
+            <h2>Langkah 2: Pembayaran</h2>
+            
+            <div class="wib-time">
+                Waktu Server (WIB): <span id="currentWIB"></span>
+            </div>
+            
+            <div class="payment-info">
+                <p>Jumlah Transfer: <strong>Rp <span id="displayAmount">10,000</span></strong> (minimal)</p>
+                <p>Metode pembayaran:</p>
+                <ul>
+                    <li>DANA: 082129071128 (a/n Yanti)</li>
+                    <li>QRIS:</li>
+                </ul>
+                <div class="qr-code">
+                    <img src="https://b.top4top.io/p_3471qzt601.jpg" alt="QR Code Pembayaran">
+                </div>
+            </div>
+
+            <div class="validation-box">
+                <h3>VERIFIKASI SUPER KETAT (WIB)</h3>
+                <p>Sistem akan memverifikasi dengan:</p>
+                <ol>
+                    <li>Nama penerima HARUS: <strong>Yanti</strong>, <strong>Damzs</strong>, atau <strong>JB Damzs Store</strong></li>
+                    <li>Nomor DANA HARUS: <strong>082129071128</strong></li>
+                    <li>Jumlah transfer HARUS TEPAT sesuai input</li>
+                    <li>Waktu transfer HARUS sesuai WIB saat ini (±3 menit)</li>
+                    <li>Foto bukti HARUS JELAS dan TIDAK DIEDIT</li>
+                </ol>
+                <div class="strict-rules">
+                    <p>AKAN DITOLAK OTOMATIS JIKA:</p>
+                    <ul>
+                        <li>Ada kesalahan penulisan nama/nomor</li>
+                        <li>Jumlah tidak tepat</li>
+                        <li>Waktu lebih dari 3 menit yang lalu</li>
+                        <li>Foto buram/tidak terbaca</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="paymentProof">Upload Bukti Transfer:</label>
+                <input type="file" id="paymentProof" accept="image/*" onchange="processPaymentProof()">
+                <img id="proofPreview" class="preview-image hidden">
+                <div id="proofError" class="error-message"></div>
+                
+                <div id="scanningStatus" class="scanning-animation hidden">
+                    <div class="spinner">🔍</div> Memindai bukti transfer...
+                </div>
+                <div id="ocrResult" class="ocr-result hidden"></div>
+                
+                <div id="validationResult"></div>
+            </div>
+            <button onclick="backToStep1()" style="background-color: #f44336;">Kembali</button>
+        </div>
+
+        <div class="whatsapp">
+            <a href="https://wa.me/6282129071128" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                Butuh bantuan? Hubungi Admin
+            </a>
+        </div>
+    </div>
+
+    <script src="validation.js"></script>
+</body>
+</html>
